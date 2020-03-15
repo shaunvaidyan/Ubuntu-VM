@@ -9,7 +9,7 @@ Run the following command from a bash session, you will be prompted for a new ho
 **NOTE: Make sure you wait for all services to start before running this script, otherwise weirdness may ensue!**
 
 ```sh
-sudo bash -c "bash <(curl -f -L -sS https://github.com/shaunvaidyan/Ubuntu-VM/boilerplate/master/run.sh)"
+sudo bash -c "bash <(curl -f -L -sS https://raw.githubusercontent.com/shaunvaidyan/Ubuntu-VM/master/boilerplate/run.sh)"
 ```
 
 ```sh
