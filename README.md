@@ -7,9 +7,9 @@ A simple bash script to handle boilerplate configurations for cloned Ubuntu VMs 
 ```
 Use SCSI Bus and Check the Discard Option (Trims when using thin provisioning)
 ```
-```
+
 The aim is to provision the new disk as an LVM physical volume (PV), extend the existing volume group (VG) to span both the new and old disk, and then expand the logical volume (LV)
-```
+
 **2. Find the VG and LV names**
 ```
 sudo vgs
