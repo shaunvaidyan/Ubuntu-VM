@@ -17,12 +17,12 @@ partprobe
 sudo pvresize /dev/sda3
 ```
 
-**3. Expand the logical volume
+**3. Expand the logical volume**
 ```sh
 sudo lvresize -l +100%FREE /dev/mapper/ubuntu-vg/ubuntu-lv
 ```
 
-**4. Expand the filesystem
+**4. Expand the filesystem**
 ```sh
 resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 ```
