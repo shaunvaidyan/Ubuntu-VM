@@ -24,7 +24,7 @@ sudo lvresize -l +100%FREE /dev/mapper/ubuntu-vg/ubuntu-lv
 
 **4. Expand the filesystem**
 ```sh
-resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 ```
 ## Usage
 
