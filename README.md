@@ -17,6 +17,7 @@ sudo touch /etc/cloud/cloud-init.disabled
 ```
 
 
+
 ## Add Disk Space to VM
 **1. Add Hard Disk in Hardware tab of VM in Proxmox GUI**
 ```
