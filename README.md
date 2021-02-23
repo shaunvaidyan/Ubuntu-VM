@@ -2,7 +2,30 @@
 
 A simple bash script to handle boilerplate configurations for cloned Ubuntu VMs (Machine ID, SSH server keys, Hostname)
 
-## Instructions for Increasing LVM size to match the Ubuntu VM's allocated space
+## Add Disk Space to VM
+**1. Add Hard Disk in Hardware tab of VM in Proxmox GUI**
+```
+Use SCSI Bus and Check the Discard Option (Trims when using thin provisioning)
+```
+```
+The aim is to provision the new disk as an LVM physical volume (PV), extend the existing volume group (VG) to span both the new and old disk, and then expand the logical volume (LV)
+```
+**2. Find the VG and LV names**
+```
+sudo vgs
+sudo lvs
+```
+
+**3. Run commands**
+```
+sudo pvcreate /dev/sdb
+sudo vgextend ubuntu-vg /dev/sdb
+sudo lvextend ubuntu-vg/ubuntu-lv -l+100%FREE
+sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
+reboot
+```
+
+## Instructions for Increasing LVM size to match the Ubuntu VM's already allocated space
 
 **1. Resize the Partition**
 ```sh
