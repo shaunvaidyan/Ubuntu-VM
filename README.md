@@ -2,7 +2,7 @@
 
 A simple bash script to handle boilerplate configurations for cloned Ubuntu VMs (Machine ID, SSH server keys, Hostname)
 
-## Expand LVM
+## Instructions for Increasing LVM size to match the Ubuntu VM's allocated space
 
 **1. Resize the Partition**
 ```sh
