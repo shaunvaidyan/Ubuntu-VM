@@ -42,7 +42,7 @@ reboot
 ```
 
 ## Instructions for Increasing LVM size to match the Ubuntu VM's already allocated space
-# Resize the file system in UI, under VM -> Hardware -> Click on the disk to resize, click "Resize disk" button
+#### FIRST Resize the file system in UI, under VM -> Hardware -> Click on the disk to resize, click "Resize disk" button
 **1. Resize the Partition**
 ```sh
 sudo parted /dev/sda
